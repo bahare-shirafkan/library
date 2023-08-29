@@ -6,6 +6,10 @@ from member.serializers import MemberSerializer
 from member.services import MemberService
 
 
+# def getOTP(request):
+    
+
+
 @api_view(['POST'])
 def store(request):
     first_name = request.POST['first_name']

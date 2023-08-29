@@ -13,3 +13,7 @@ class Member(models.Model):
         max_length=10, choices=membership_choice)
     validity_date = models.DateTimeField()
     created = models.DateTimeField(default=timezone.now)
+
+class OTP(models.Model):
+    user = models.OneToOneField(Member, on_delete=models.CASCADE)
+    otp = models.CharField(max_length=6)

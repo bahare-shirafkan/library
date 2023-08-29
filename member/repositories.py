@@ -16,3 +16,7 @@ class MemberRepository:
         member.validity_date = validity_date
         member.save()
         return member
+
+    def getByMobile(mobile):
+        member=Member.objects.get(mobile=mobile)
+        return member
